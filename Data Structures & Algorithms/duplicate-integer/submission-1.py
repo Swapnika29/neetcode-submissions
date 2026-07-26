@@ -1,0 +1,11 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        duplicate = {}
+        for i in nums:
+            if i in duplicate:
+                duplicate[i] += 1
+                return True
+            else:
+                duplicate[i] = 1
+        return False
+        
